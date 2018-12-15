@@ -14,7 +14,7 @@ for (let filePath of filePaths) {
         title: results.GoodreadsResponse.book.title,
         isbn: results.GoodreadsResponse.book.isbn,
         isbn13: results.GoodreadsResponse.book.isbn13,
-        description: results.GoodreadsResponse.book.description,
+        description: results.GoodreadsResponse.book.description.replace(/<[^>]*>/g,""),
         image_url: getLargeImageUrl(results.GoodreadsResponse.book.image_url),
         authors: Array.isArray(results.GoodreadsResponse.book.authors.author)
           ? results.GoodreadsResponse.book.authors.author.map(author => {
