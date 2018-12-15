@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "async_await.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/pnminh/test-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/pnminh/test-js#readme",
+  "dependencies": {
+    "@types/xml2js": "^0.4.3",
+    "marked": "^0.5.2",
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/marked": "^0.4.2",
+    "@types/node": "^10.12.12",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}

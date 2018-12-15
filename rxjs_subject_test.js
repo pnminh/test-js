@@ -1,0 +1,16 @@
+rxjs = require('rxjs');
+const subject = new rxjs.Subject();
+subject.next('test');
+subject.subscribe(val=>{console.log(`the value for the subscriber: ${val}`)});
+subject.next('test2');
+const behaviorSubject = new rxjs.BehaviorSubject();
+behaviorSubject.next('first behavior subject');
+behaviorSubject.next('2nd behavior subject');
+behaviorSubject.subscribe(val=>{console.log(`the value for the subscriber: ${val}`)});
+behaviorSubject.next('3rd behavior subject');
+const replaySubject = new rxjs.ReplaySubject(2);
+replaySubject.next('first replaySubject');
+replaySubject.next('2nd replaySubject');
+replaySubject.next('3rd replaySubject');
+replaySubject.subscribe(val=>{console.log(`the value for the subscriber: ${val}`)});
+replaySubject.next('4th replaySubject');
