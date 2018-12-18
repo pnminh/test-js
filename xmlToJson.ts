@@ -14,8 +14,12 @@ for (let filePath of filePaths) {
         title: results.GoodreadsResponse.book.title,
         isbn: results.GoodreadsResponse.book.isbn,
         isbn13: results.GoodreadsResponse.book.isbn13,
-        description: results.GoodreadsResponse.book.description.replace(/<[^>]*>/g,""),
+        description: results.GoodreadsResponse.book.description.replace(
+          /<[^>]*>/g,
+          ''
+        ),
         image_url: getLargeImageUrl(results.GoodreadsResponse.book.image_url),
+        price: Math.floor(Math.random() * 4) + 5.99,
         authors: Array.isArray(results.GoodreadsResponse.book.authors.author)
           ? results.GoodreadsResponse.book.authors.author.map(author => {
               return author.name;
@@ -34,6 +38,7 @@ interface Book {
   image_url: string;
   isbn: string;
   isbn13: string;
+  price: number;
   authors: string[];
 }
 interface Author {
