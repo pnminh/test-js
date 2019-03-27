@@ -16,5 +16,4 @@ function callbackShortForm(err,user){
 function  callbackDifferentKeyValue(err,userValue){
     let users = {userKey:userValue};
     console.log(`callbackDifferentKeyValue:${JSON.stringify(users.userKey)}`);
-
 }
